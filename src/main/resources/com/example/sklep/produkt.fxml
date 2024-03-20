@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="1000.0" text="Sklep RTV" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sklep.ProduktController">
+    <content>
+        <SplitPane dividerPositions="0.29797979797979796" prefHeight="905.0" prefWidth="998.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="794.0" prefWidth="292.0">
+                    <children>
+                        <Button fx:id="koszykButton" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="96.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#przejdzDoKoszyka" prefHeight="25.0" prefWidth="135.0" text="Koszyk" textAlignment="CENTER">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Button>
+                        <Button fx:id="ProduktyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="144.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#przejdzDoSklepu" prefHeight="25.0" prefWidth="135.0" text="Produkty" textAlignment="CENTER">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Button>
+                        <Button fx:id="wyloguj" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="192.0" minHeight="-Infinity" mnemonicParsing="false" onAction="#Wyloguj" prefHeight="25.0" prefWidth="135.0" text="Wyloguj" textAlignment="CENTER">
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                    </Button>
+                        <Label alignment="CENTER" layoutX="107.0" layoutY="31.0" text="Zalogowany">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="pseudo" alignment="CENTER" layoutX="2.0" layoutY="58.0" prefHeight="17.0" prefWidth="279.0" text="" textFill="#ff1818" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1034.0" prefWidth="698.0">
+               <children>
+                  <ImageView fx:id="zdjecie" fitHeight="215.0" fitWidth="231.0" layoutX="24.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="tytul" alignment="CENTER" layoutX="264.0" layoutY="27.0" prefHeight="177.0" prefWidth="378.0" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="opis" layoutX="47.0" layoutY="204.0" prefHeight="229.0" prefWidth="601.0" />
+                  <Button fx:id="do_koszyka" onAction="#DodajDoKoszyka" layoutX="513.0" layoutY="469.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" text="Dodaj do koszyka" />
+                  <Label fx:id="cena" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="129.0" layoutY="456.0" prefHeight="73.0" prefWidth="199.0" text="." />
+                  <Label contentDisplay="RIGHT" layoutX="334.0" layoutY="456.0" prefHeight="73.0" prefWidth="42.0" text="zł" />
+                  <Label contentDisplay="RIGHT" layoutX="393.0" layoutY="493.0" prefHeight="46.0" prefWidth="43.0" text="Ilość" />
+                  
+                  <Label contentDisplay="RIGHT" layoutX="392.0" layoutY="446.0" prefHeight="46.0" prefWidth="68.0" text="Dostępność" />
+                  <Label fx:id="ilosc" layoutX="465.0" layoutY="449.0" prefHeight="41.0" prefWidth="41.0"/>
+                  <TextField fx:id="ilosc_zamow" layoutX="460.0" layoutY="504.0" prefHeight="25.0" prefWidth="30.0" text="1"/>
+               </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </content>
+</TitledPane>
